@@ -1,0 +1,16 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /.*
+  script: main.app
+
+env_variables:
+    CLOUDSQL_CONNECTION_NAME: pythonmysqlapp:northamerica-northeast1:user
+    CLOUDSQL_USER: root
+    CLOUDSQL_PASSWORD: sup3rs0nic
+
+libraries:
+- name: MySQLdb
+  version: "latest"
